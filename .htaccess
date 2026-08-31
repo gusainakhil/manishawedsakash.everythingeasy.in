@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^invite/([A-Za-z0-9-]+)/?$ invite.php?slug=$1 [QSA,L]
+RewriteRule ^admin/?$ admin/index.php [QSA,L]
+
+Options -Indexes
+
+<FilesMatch "^(config\.php|schema\.sql|README\.md)$">
+  Require all denied
+</FilesMatch>
+
