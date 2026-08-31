@@ -8,7 +8,7 @@ return [
     'db' => [
         'host' => 'localhost',
         'port' => 3306,
-        'name' => 'wedding_invitation',
+        'name' => 'manishawedsakash.everythingeasy.in',
         'user' => 'manishawedsakash.everythingeasy.in',
         'pass' => 'manishawedsakash.everythingeasy.in',
         'charset' => 'utf8mb4',
