@@ -53,7 +53,7 @@ require '_header.php'; ?>
     </div><a class="btn primary" href="guest-form.php">+ Add Guest</a>
 </section>
 <section class="panel">
-    <form class="search" data-guest-search><input name="q" value="<?= e($q) ?>" placeholder="Search guest, phone or email…"><button
+    <form class="search" data-guest-search><input type="search" name="q" value="<?= e($q) ?>" placeholder="Search guest, phone or email…"><button
             class="btn">Search</button></form>
     <div class="table-wrap">
         <table>

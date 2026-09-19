@@ -54,8 +54,12 @@ if (guestSearchForm && guestResults) {
     loadGuests();
   });
 
-  searchInput.addEventListener('input', () => {
+  const scheduleGuestSearch = () => {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(loadGuests, 250);
+  };
+
+  ['input', 'keyup', 'change', 'search', 'compositionend'].forEach(eventName => {
+    searchInput.addEventListener(eventName, scheduleGuestSearch);
   });
 }
