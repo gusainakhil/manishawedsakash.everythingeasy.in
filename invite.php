@@ -45,7 +45,7 @@ $title = $guest['name'] . ', You Are Invited | ' . $bride . ' & ' . $groom; ?>
     <meta property="og:description" content="A personalized invitation to celebrate with us on 18 October 2026.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= e($canonical) ?>">
-    <meta property="og:image" content="<?= base_url('images/manishagusain.png') ?>">
+    <meta property="og:image" content="<?= base_url('image/manishagusain.png') ?>">
     <meta name="theme-color" content="#6d1728">
     <link rel="canonical" href="<?= e($canonical) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
