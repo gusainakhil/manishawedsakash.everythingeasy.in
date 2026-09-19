@@ -17,8 +17,7 @@ function render_guest_rows(array $guests): void
     foreach ($guests as $g):
         $url = base_url('invite/' . $g['slug']); ?>
         <tr>
-            <td><b><?= e($g['name']) ?></b><small><?= e($g['relation'] ?: $g['phone']) ?></small><a class="btn whatsapp" target="_blank"
-                    href="https://wa.me/?text=<?= rawurlencode('Hi ' . $g['name'] . ', you are warmly invited to our wedding celebration: ' . $url) ?>">Share</a></td>
+            <td><b><?= e($g['name']) ?></b><small><?= e($g['relation'] ?: $g['phone']) ?></small></td>
             <td><b><?= $g['invitation_views'] ? 'Yes' : 'No' ?></b><small><?= $g['invitation_views'] ?>
                     views<?= $g['last_viewed_at'] ? ' · ' . e(date('d M, g:i A', strtotime($g['last_viewed_at']))) : '' ?></small>
             </td>
@@ -30,6 +29,10 @@ function render_guest_rows(array $guests): void
                 <form method="post" onsubmit="return confirm('Delete this guest?')"><?= csrf_field() ?><button
                         name="delete" value="<?= $g['id'] ?>">Delete</button></form>
             </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="actions"><a target="_blank"
+                    href="https://wa.me/?text=<?= rawurlencode('Hi ' . $g['name'] . ', you are warmly invited to our wedding celebration: ' . $url) ?>">Share</a></td>
         </tr><?php
     endforeach;
     if (!$guests): ?>
