@@ -43,7 +43,7 @@ if (guestSearchForm && guestResults) {
       window.history.replaceState({}, '', nextUrl);
     } catch (error) {
       if (error.name !== 'AbortError') {
-        guestResults.innerHTML = '<tr><td colspan="4" class="empty">Unable to load guests. Please try again.</td></tr>';
+        guestResults.innerHTML = '<tr><td colspan="5" class="empty">Unable to load guests. Please try again.</td></tr>';
       }
     }
   };
